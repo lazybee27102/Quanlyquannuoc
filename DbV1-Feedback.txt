@@ -1,0 +1,56 @@
+1. Bảng sản phẩm
+- Nếu tách bảng sản phẩm và bảng nguyên liệu ra thành 2 bảng riêng biệt, sẽ không tính được lượng tồn kho, vì lượng tồn kho là dựa trên bảng sản phẩm hay bảng nguyên liệu, hay cả hai ?
+- Thuộc tính Boolean DuocPhaChe không cần thiết lắm, vì dù gì cũng phải tạo hoá đơn để đưa bên pha chế lấy (hoặc pha chế) sản phẩm ra -> Đổi lại vào phần ghi chú
+
+-> 1 sản phẩm sẽ bao gồm nhiều nguyên liệu , 1 nguyên liệu sẽ thuộc về nhiều sản phẩm khác nhau => Quan hệ nhiều nhiều
+-> Tạo 1 bảng CHITIET_SANPHAM
+-> Đổi lại thành cấu trúc như sau:
+SANPHAM                 NGUYENLIEU                      CHITIET_SANPHAM
+-------                 ----------                      ------------------
+MaSanPham               MaNguyenLieu                    MaSanPhamNguyenLieu
+MaLoaiSanPham           TenNguyenLieu                   MaSanPham
+TenSanPham              DonViTinh                       MaNguyenLieu
+GiaTien                 TonKho                          SoLuong
+GhiChu                  GiaNhap         
+
+Trong đó:
+- Giá nhập: Là giá nhập hàng trên một đơn vị tính, ví dụ 20k/1kg -> Dùng để tính toán tổng chi phí nhập thêm nguyên liệu
+- Nguyên liệu ở đây có thể là:
+	+ Đường: tính bằng gam
+	+ Muối: tính bằng gam
+	+ Sữa: Tính bằng ml
+	+ Cocacola: Tính bằng loong
+	+ ..... Tính bằng đơn vị nhỏ nhất có thể mua bán được
+2. Bảng chi tiết hoá đơn
+- Không cần phải bỏ vào thuộc tính đơn giá và thành tiền -> Vì trong mỗi sản phẩm đã có đơn giá sẵn, và bảng hoá đơn cũng đã có thuộc tính tổng tiền
+-> Xoá thuộc tính DonGia và ThanhTien (Để lại số lượng)
+3. Bảng pha chế 
+- Vì nghiệp vụ pha chế chỉ được thực hiện khi có hoá đơn, nên không cần phải tạo ra 2 bảng PHACHE, CHITIET_PHACHE
+- Bảng PHIEUPHACHE và bảng SOCHO => Ok (Cân nhắc việc để mã nhân viên vào bảng PHIEUPHACHE -> không quan trọng, không để cũng được)
+4. Bản nhân viên: OK
+- Có thể thêm thuộc tính công việc để phân biệt họ là người làm công việc gì: kế toán, bán hàng, pha chế....
+5. Bảng phiếu mua hàng
+- Phiếu mua hàng được lập khi nguyên liệu trong kho còn ít
+- Một phiếu mua hàng có nhiều nguyên liệu và ngược lại -> Nhiều nhiều
+- Bảng CHITIET_PHIEUMUAHANG cần phải reference đến Bảng NGUYENLIEU -> Để bộ phận kho biết được mặt hàng nào nhập để kiểm tra(Mua là mua nguyên liệu, chứ không mua sản phẩm)
+CHITIET_PHIEUMUAHANG
+--------------------
+MaChitietPhieuMuaHang
+MaPhieuMuaHang
+MaNguyenLieu
+Soluong
+
+6.Phiếu nhập
+- Không cần reference nhiều, vì nó chỉ cần reference đến phiếu mua hàng (Để bik mua hàng gì để kiểm)
+- Trong đó chỉ cần lưu lại nhân viên kiểm hàng là được
+- Thêm một thuộc tính là DaKiemHang(Đã kiểm hàng, để đảm bảo hàng đúng chất lượng)
+7. Phiếu chi 
+- Phiếu chi dựa trên phiếu nhập hàng
+- Chỉ cần reference đến phiếu nhập hàng là có thể tính toán được
+- Bỏ các thuộc tính không cần thiết như
+	+ Tên nhà cung cấp, Địa chỉ: Vì trên nguyên liệu đã có sẵn hết rồi
+	+ Người nhận tiền: Chính là nhà cung cấp sản phẩm (Mình không có bảng NGUOI để lưu lại người này)
+	+ Tổng tiền chi: Vì phiếu mua hàng đã có tổng tiền rồi
+8. Bảng nhà cung cấp sản phẩm
+- Nhà cung cấp sản phẩm có nhiều nguyên liệu và nguyên liệu cũng đc nhập từ nhiều nhà cung cấp sản phẩm
+- Chỉ cần cho Nguyên liệu reference đến nhà cung cấp sản phẩm là ok -> Duyệt (Quan hệ nhiều nhiều)
