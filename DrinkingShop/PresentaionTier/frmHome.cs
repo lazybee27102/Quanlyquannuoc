@@ -55,5 +55,41 @@ namespace PresentaionTier
 
             frmbill.Show();
         }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmImportRequest frmbill = new frmImportRequest();
+            if (ExistForm(frmbill)) return;
+            frmbill.MdiParent = this;
+
+            frmbill.Show();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmImport frmbill = new frmImport();
+            if (ExistForm(frmbill)) return;
+            frmbill.MdiParent = this;
+
+            frmbill.Show();
+        }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmApproveImportRequest frmbill = new frmApproveImportRequest();
+            if (ExistForm(frmbill)) return;
+            frmbill.MdiParent = this;
+
+            frmbill.Show();
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmApproveMixing frmbill = new frmApproveMixing();
+            if (ExistForm(frmbill)) return;
+            frmbill.MdiParent = this;
+
+            frmbill.Show();
+        }
     }
 }

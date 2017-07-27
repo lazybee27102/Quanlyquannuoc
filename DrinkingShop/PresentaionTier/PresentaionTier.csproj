@@ -51,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmApproveImportRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmApproveImportRequest.Designer.cs">
+      <DependentUpon>frmApproveImportRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmApproveMixing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmApproveMixing.Designer.cs">
+      <DependentUpon>frmApproveMixing.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,18 @@
     </Compile>
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportRequest.Designer.cs">
+      <DependentUpon>frmImportRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -77,11 +101,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmApproveImportRequest.resx">
+      <DependentUpon>frmApproveImportRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmApproveMixing.resx">
+      <DependentUpon>frmApproveMixing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBill.resx">
       <DependentUpon>frmBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportRequest.resx">
+      <DependentUpon>frmImportRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
@@ -108,6 +144,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{5b441600-9b63-4ed7-aba8-b81623433aa5}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{54c255f3-096b-43f8-b936-294125bd87a2}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

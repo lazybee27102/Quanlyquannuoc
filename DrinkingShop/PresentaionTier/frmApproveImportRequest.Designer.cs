@@ -1,6 +1,6 @@
 ﻿namespace PresentaionTier
 {
-    partial class frmMixing
+    partial class frmApproveImportRequest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMixing));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApproveImportRequest));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -46,8 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -83,7 +83,7 @@
             this.groupControl2.Location = new System.Drawing.Point(163, 6);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(649, 446);
-            this.groupControl2.TabIndex = 4;
+            this.groupControl2.TabIndex = 8;
             this.groupControl2.Text = "Thông Tin Hoá";
             // 
             // radioButton3
@@ -101,7 +101,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(401, 149);
+            this.radioButton2.Location = new System.Drawing.Point(414, 147);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(73, 17);
             this.radioButton2.TabIndex = 30;
@@ -115,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(236, 147);
+            this.radioButton1.Location = new System.Drawing.Point(252, 147);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(57, 17);
             this.radioButton1.TabIndex = 29;
@@ -126,7 +126,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(146, 151);
+            this.label4.Location = new System.Drawing.Point(150, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 28;
@@ -144,7 +144,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(146, 114);
+            this.label3.Location = new System.Drawing.Point(150, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 26;
@@ -164,8 +164,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(633, 172);
@@ -178,7 +180,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(136, 54);
             this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Lập Phiếu";
+            this.simpleButton1.Text = "Xác Nhận";
             // 
             // textBox2
             // 
@@ -192,16 +194,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 87);
+            this.label2.Location = new System.Drawing.Point(150, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Số Chờ :";
+            this.label2.Text = "Tổng Tiền :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(146, 59);
+            this.label1.Location = new System.Drawing.Point(150, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 21;
@@ -219,7 +221,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(146, 32);
+            this.label7.Location = new System.Drawing.Point(150, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 19;
@@ -236,8 +238,8 @@
             this.groupControl1.Location = new System.Drawing.Point(8, 5);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(151, 447);
-            this.groupControl1.TabIndex = 3;
-            this.groupControl1.Text = "Danh Sách Yêu Cầu";
+            this.groupControl1.TabIndex = 7;
+            this.groupControl1.Text = "Danh Sách Phiếu Yêu Cầu";
             // 
             // dataGridView2
             // 
@@ -245,57 +247,57 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 59);
+            this.dataGridView2.Location = new System.Drawing.Point(2, 51);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(147, 386);
+            this.dataGridView2.Size = new System.Drawing.Size(147, 394);
             this.dataGridView2.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Tìm Theo Mã :";
             // 
             // textBox5
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(79, 29);
+            this.textBox5.Location = new System.Drawing.Point(79, 24);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(67, 21);
-            this.textBox5.TabIndex = 32;
+            this.textBox5.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Tìm Theo Mã :";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(226, 51);
+            this.dateTimePicker1.Location = new System.Drawing.Point(226, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(416, 21);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dateTimePicker1.TabIndex = 33;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 134);
-            this.pictureBox1.TabIndex = 176;
+            this.pictureBox1.Size = new System.Drawing.Size(97, 141);
+            this.pictureBox1.TabIndex = 174;
             this.pictureBox1.TabStop = false;
             // 
-            // frmMixing
+            // frmApproveImportRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 457);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
-            this.Name = "frmMixing";
-            this.Text = "Yêu Cầu Pha Chế";
+            this.Name = "frmApproveImportRequest";
+            this.Text = "Phiếu Mua Hàng";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
