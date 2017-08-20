@@ -1,0 +1,4 @@
+﻿sơ đồ cấu trúc đa hợp: OK
+sơ đồ giao tiếp: OK
+thiết kế kiến trúc: OK
+Chương 9: Thiet ke chi tiet: OK
